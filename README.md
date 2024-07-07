@@ -48,4 +48,8 @@ Clone the remote repository to your workstation.
 
 5. Testing:
    - Run tests with `npm test` in the terminal.
+  
+### Default app login credentials
+   - Email : admin@utm.com
+   - Password : Admin@123
 
