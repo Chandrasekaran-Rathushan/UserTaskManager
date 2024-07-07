@@ -53,5 +53,5 @@ Clone the remote repository to your workstation.
    - Email : admin@utm.com
    - Password : Admin@123
 
-[Application Preview]([http://example.com](https://drive.google.com/file/d/1uOJ6QHv9fC93YAm3w5Z69KhBWI8aNmcj/view?usp=drive_link))
+[Application Preview](https://drive.google.com/file/d/1uOJ6QHv9fC93YAm3w5Z69KhBWI8aNmcj/view?usp=drive_link)
 
