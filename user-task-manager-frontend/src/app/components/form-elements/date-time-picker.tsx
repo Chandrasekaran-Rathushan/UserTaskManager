@@ -15,6 +15,7 @@ interface UtmDateTimePickerProps {
   fullWidth?: boolean;
   error?: boolean;
   helperText?: string;
+  testid?: string;
 }
 
 const UtmDateTimePicker: React.FC<UtmDateTimePickerProps> = ({
@@ -26,6 +27,7 @@ const UtmDateTimePicker: React.FC<UtmDateTimePickerProps> = ({
   fullWidth = false,
   error = false,
   helperText,
+  testid,
 }) => {
   return (
     <LocalizationProvider dateAdapter={AdapterMoment}>
@@ -45,6 +47,7 @@ const UtmDateTimePicker: React.FC<UtmDateTimePickerProps> = ({
                 fullWidth: fullWidth,
                 helperText: helperText,
                 error: error,
+                inputProps: { "data-testid": testid },
               },
             }}
           />

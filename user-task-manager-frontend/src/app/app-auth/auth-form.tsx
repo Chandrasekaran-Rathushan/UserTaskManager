@@ -138,6 +138,7 @@ const AuthForm: React.FC<AuthFormProps> = ({
               {...register("password")}
               error={!!errors.password}
               autoComplete="off"
+              inputProps={{ "data-testid": "password" }}
             />
             {!!errors.password && (
               <FormHelperText error={!!errors.password}>
@@ -157,6 +158,7 @@ const AuthForm: React.FC<AuthFormProps> = ({
               error={!!errors.confirmPassword}
               helperText={errors.confirmPassword?.message}
               margin="normal"
+              inputProps={{ "data-testid": "confirmPassword" }}
             />
           </Grid>
         )}
@@ -171,7 +173,7 @@ const AuthForm: React.FC<AuthFormProps> = ({
         variant="contained"
         fullWidth
         sx={{ mt: 3, mb: 2 }}
-        data-testid="loginSubmitBtn"
+        data-testid="submitBtn"
       >
         <span>{isSignIn ? "Sign-in" : "Sign-up"}</span>
       </LoadingButton>

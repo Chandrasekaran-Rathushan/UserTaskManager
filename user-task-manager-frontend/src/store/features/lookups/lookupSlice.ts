@@ -1,6 +1,10 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { AppThunk } from "../../store";
-import { getTaskPriorities, getTaskStatuses, ListItem } from "@/app/api/lookupApis";
+import {
+  getTaskPriorities,
+  getTaskStatuses,
+  ListItem,
+} from "@/app/api/lookupApis";
 
 interface TasksState {
   taskStatuses: ListItem[];
@@ -10,8 +14,42 @@ interface TasksState {
 }
 
 const initialState: TasksState = {
-  taskStatuses: [],
-  taskPriorities: [],
+  taskStatuses: [
+    {
+      key: "New",
+      value: 1,
+    },
+    {
+      key: "Ongoing",
+      value: 2,
+    },
+    {
+      key: "Completed",
+      value: 3,
+    },
+    {
+      key: "Suspended",
+      value: 4,
+    },
+  ],
+  taskPriorities: [
+    {
+      key: "Low",
+      value: 1,
+    },
+    {
+      key: "Medium",
+      value: 2,
+    },
+    {
+      key: "High",
+      value: 3,
+    },
+    {
+      key: "Critical",
+      value: 4,
+    },
+  ],
   loading: false,
   error: null,
 };

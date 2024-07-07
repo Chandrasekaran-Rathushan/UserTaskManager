@@ -20,7 +20,6 @@ import ConfirmationDialog from "../modal/modal-popup";
 import SelectUtm from "../form-elements/select";
 import TextFieldUtm from "../form-elements/text-field";
 import Loader from "../loader/loader";
-import moment from "moment";
 import { useSnackbar } from "@/app/contexts/SnackbarContext";
 
 const taskSchema = yup.object().shape({
@@ -188,6 +187,7 @@ const EventModal: React.FC<EventModalProps> = ({ open, handleClose }) => {
                     label="Status"
                     options={taskStatuses}
                     error={errors.status}
+                    testid="status"
                   />
                 </Grid>
                 <Grid item md={6} xs={12}>
@@ -197,6 +197,7 @@ const EventModal: React.FC<EventModalProps> = ({ open, handleClose }) => {
                     label="Priority"
                     options={taskPriorities}
                     error={errors.priority}
+                    testid="priority"
                   />
                 </Grid>
               </Grid>
@@ -211,6 +212,7 @@ const EventModal: React.FC<EventModalProps> = ({ open, handleClose }) => {
                     control={control}
                     label="Title"
                     error={errors.title}
+                    testid="title"
                   />
                 </Grid>
               </Grid>
@@ -225,6 +227,7 @@ const EventModal: React.FC<EventModalProps> = ({ open, handleClose }) => {
                     control={control}
                     label="Description"
                     error={errors.description}
+                    testid="description"
                   />
                 </Grid>
               </Grid>
@@ -241,6 +244,7 @@ const EventModal: React.FC<EventModalProps> = ({ open, handleClose }) => {
                     label="Start Date"
                     error={!!errors.start && !!errors?.start?.message}
                     helperText={errors?.start?.message || ""}
+                    testid="startDate"
                   />
                 </Grid>
               </Grid>
@@ -257,6 +261,7 @@ const EventModal: React.FC<EventModalProps> = ({ open, handleClose }) => {
                     label="End Date"
                     error={!!errors.end && !!errors?.end?.message}
                     helperText={errors?.end?.message || ""}
+                    testid="endDate"
                   />
                 </Grid>
               </Grid>
@@ -280,6 +285,7 @@ const EventModal: React.FC<EventModalProps> = ({ open, handleClose }) => {
               size="medium"
               type="submit"
               ref={submitButtonRef}
+              data-testid="submitBtn"
             >
               Save
             </Button>

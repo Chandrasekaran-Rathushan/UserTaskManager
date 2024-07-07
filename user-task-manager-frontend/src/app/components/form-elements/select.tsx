@@ -15,6 +15,7 @@ interface SelectUtmProps {
   label: string;
   options: ListItem[];
   error?: FieldError;
+  testid?: string;
 }
 
 const SelectUtm: React.FC<SelectUtmProps> = ({
@@ -23,6 +24,7 @@ const SelectUtm: React.FC<SelectUtmProps> = ({
   label,
   options,
   error,
+  testid,
 }) => {
   return (
     <FormControl fullWidth error={!!error}>
@@ -47,6 +49,7 @@ const SelectUtm: React.FC<SelectUtmProps> = ({
                   {option.key}
                 </MenuItem>
               ))}
+              data-testid={testid}
             </Select>
             {error && <FormHelperText>{error.message}</FormHelperText>}
           </>

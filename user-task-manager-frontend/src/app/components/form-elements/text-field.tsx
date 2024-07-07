@@ -11,6 +11,7 @@ interface CommonTextFieldProps {
   variant?: "outlined" | "filled" | "standard";
   fullWidth?: boolean;
   id?: string;
+  testid?: string;
 }
 
 const TextFieldUtm: React.FC<CommonTextFieldProps> = ({
@@ -22,6 +23,7 @@ const TextFieldUtm: React.FC<CommonTextFieldProps> = ({
   variant = "outlined",
   fullWidth = true,
   id,
+  testid,
 }) => {
   return (
     <Controller
@@ -37,6 +39,7 @@ const TextFieldUtm: React.FC<CommonTextFieldProps> = ({
           variant={variant}
           error={!!error}
           helperText={error?.message || ""}
+          inputProps={{ "data-testid": testid }}
         />
       )}
     />

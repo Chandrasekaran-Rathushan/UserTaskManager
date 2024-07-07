@@ -26,7 +26,9 @@ interface MultiSelectUtiProps {
   fullWidth?: boolean;
   options: ListItem[];
   handleChange: (event: SelectChangeEvent<string[]>) => void;
-  handleMenuClose?: (event: MouseEvent | TouchEvent) => void;
+  handleMenuClose?:
+    | ((event: React.SyntheticEvent<Element, Event>) => void)
+    | undefined;
 }
 
 const MultiSelectUti: React.FC<MultiSelectUtiProps> = ({

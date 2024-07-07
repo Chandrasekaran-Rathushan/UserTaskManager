@@ -135,7 +135,7 @@ export default function App() {
     search();
   }
 
-  const handleMuiSelectClose = (event: MouseEvent | TouchEvent) => {
+  const handleMuiSelectClose = (event: React.SyntheticEvent<Element, Event>) => {
     search();
   };
 
