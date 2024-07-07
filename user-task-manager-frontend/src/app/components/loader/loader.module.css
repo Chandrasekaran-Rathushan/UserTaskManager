@@ -1,0 +1,16 @@
+.loaderDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loaderText {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #092532;
+  text-align: center;
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 2rem;
+}
